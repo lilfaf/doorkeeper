@@ -13,7 +13,8 @@ module Doorkeeper
           'token_type'    => token.token_type,
           'expires_in'    => token.expires_in_seconds,
           'refresh_token' => token.refresh_token,
-          'scope'         => token.scopes_string
+          'scope'         => token.scopes_string,
+          'resource_owner_id' => token.resource_owner_id
         }.reject { |_, value| value.blank? }
       end
 
